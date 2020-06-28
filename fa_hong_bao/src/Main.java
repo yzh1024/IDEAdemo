@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-    ArrayList<Integer> list = new ArrayList<>();
+    ArrayList<Integer> list ;
     Manage manage = new Manage("老板",100);
     employee A = new employee("A",0);
     employee B = new employee("B",0);
