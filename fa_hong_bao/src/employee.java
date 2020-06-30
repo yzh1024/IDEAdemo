@@ -9,7 +9,12 @@ public class employee extends User {
         super(name, money);
     }
 
+    /**
+     * 成员收红包
+     * @param list
+     */
     public void recive(ArrayList<Integer> list){
+        //匿名对象获取随机数
         int r = new Random().nextInt(list.size());
         int money = list.remove(r);
         super.setMoney(super.getMoney()+money);

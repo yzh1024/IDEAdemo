@@ -10,6 +10,7 @@ public class User {
         this.money = money;
     }
 
+    //显示姓名及余额
     public void show(){
         System.out.println(this.name+":"+this.money);
     }
