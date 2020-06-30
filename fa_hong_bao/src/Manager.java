@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Manage extends User {
-    public Manage() {
+public class Manager extends User {
+    public Manager() {
     }
 
-    public Manage(String name, int money) {
+    public Manager(String name, int money) {
         super(name, money);
     }
 
