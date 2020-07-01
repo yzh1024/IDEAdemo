@@ -11,7 +11,6 @@ public class JDBCUtils {
     private static String user;
     private static String password;
     private static String driver;
-
     /*
      * 文件的读取，只需要读取一次即可拿到这些值，使用静态代码块
      * */
@@ -24,7 +23,7 @@ public class JDBCUtils {
             ClassLoader classLoader = JDBCUtils.class.getClassLoader();
             URL res = classLoader.getResource("jdbc.properties");
             String path = res.getPath();
-            System.out.println(path);
+//            System.out.println(path);
             //2、加载文件
 //            pro.load(new FileReader("D:\\IDEAdemo\\jdbc\\src\\jdbc.properties"));
             pro.load(new FileReader(path));
@@ -48,7 +47,7 @@ public class JDBCUtils {
      * @return 连接对象
      */
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url,user,password);
+        return DriverManager.getConnection(url+"?characterEncoding=utf8",user,password);
     }
 
     /**
