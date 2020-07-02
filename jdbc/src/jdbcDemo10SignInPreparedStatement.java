@@ -7,8 +7,9 @@ import java.util.Scanner;
  * 案例：
  * 1、通过键盘录入用户名和密码
  * 2、判断用户是否登录成功
+ * 3、使用PrepareStatement实现
  * */
-public class jdbcDemo9SignIn {
+public class jdbcDemo10SignInPreparedStatement {
     public static void main(String[] args) {
         //1、键盘录入，接受用户名和密码
         Scanner sc = new Scanner(System.in);
@@ -30,7 +31,7 @@ public class jdbcDemo9SignIn {
 
     public static boolean login(String username, String password) {
         Connection conn = null;
-        Statement stmt = null;
+        PreparedStatement pstmt = null;
         ResultSet rs = null;
         if (username == null || password == null) {
             return false;
@@ -40,17 +41,20 @@ public class jdbcDemo9SignIn {
             //1、获取连接
             conn = JDBCUtils.getConnection();
             //2、定义SQL
-            String sql = "select * from user where name = '" + username + "'and password = '" + password + "'";
+            String sql = "select * from user where name = ? and password = ?";
             //3、获取执行SQL对象
-            stmt = conn.createStatement();
+            pstmt = conn.prepareStatement(sql);
+            //给‘？’赋值
+            pstmt.setString(1,username);
+            pstmt.setString(2,password);
             //4、执行查询
-            rs = stmt.executeQuery(sql);
+            rs = pstmt.executeQuery();
             //5、判断
             return rs.next();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            JDBCUtils.close(rs, stmt, conn);
+            JDBCUtils.close(rs, pstmt, conn);
         }
 
         return false;

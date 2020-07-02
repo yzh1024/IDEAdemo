@@ -47,7 +47,7 @@ public class JDBCUtils {
      * @return 连接对象
      */
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url+"?characterEncoding=utf8",user,password);
+        return DriverManager.getConnection(url,user,password);
     }
 
     /**
