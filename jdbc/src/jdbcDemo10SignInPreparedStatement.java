@@ -1,4 +1,4 @@
-import util.JDBCUtils;
+import c3p0util.JDBCUtils;
 
 import java.sql.*;
 import java.util.Scanner;

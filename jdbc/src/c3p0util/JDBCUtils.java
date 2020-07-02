@@ -1,44 +1,53 @@
-package utils;
+package c3p0util;
 
-import com.alibaba.druid.pool.DruidDataSourceFactory;
-
-import javax.sql.DataSource;
+import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.net.URL;
+import java.sql.*;
 import java.util.Properties;
 
-/*
-Druid连接池的工具类
- */
 public class JDBCUtils {
-    //1、定义成员变量 DataSource
-    private static DataSource ds;
-
+    private static String url;
+    private static String user;
+    private static String password;
+    private static String driver;
+    /*
+     * 文件的读取，只需要读取一次即可拿到这些值，使用静态代码块
+     * */
     static {
-        Properties pro = new Properties();
+            //读取资源文件，获取值
         try {
-            //1、加载配置文件
-            pro.load(JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
-            //2、获取DataSource
-            ds = DruidDataSourceFactory.createDataSource(pro);
+            //1、创建Properties集合类
+            Properties pro = new Properties();
+            //获取src路径下的文件方式--->ClassLoader 类加载器
+            ClassLoader classLoader = JDBCUtils.class.getClassLoader();
+            URL res = classLoader.getResource("jdbc.properties");
+            String path = res.getPath();
+//            System.out.println(path);
+            //2、加载文件
+//            pro.load(new FileReader("D:\\IDEAdemo\\jdbc\\src\\jdbc.properties"));
+            pro.load(new FileReader(path));
+            //3、获取数据，赋值
+            url=pro.getProperty("url");
+            user=pro.getProperty("user");
+            password=pro.getProperty("password");
+            driver=pro.getProperty("driver");
+            Class.forName(driver);
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
+
     /**
      * 获取连接
      *
-     * @return
-     * @throws SQLException
+     * @return 连接对象
      */
     public static Connection getConnection() throws SQLException {
-        return ds.getConnection();
+        return DriverManager.getConnection(url,user,password);
     }
 
     /**
@@ -69,9 +78,9 @@ public class JDBCUtils {
      *
      * @param stmt
      * @param conn
+     * @param rs
      */
-    public static void close(ResultSet rs, Statement stmt, Connection conn) {
-
+    public static void close( ResultSet rs,Statement stmt, Connection conn) {
         if (rs != null) {
             try {
                 rs.close();
@@ -93,16 +102,5 @@ public class JDBCUtils {
                 e.printStackTrace();
             }
         }
-
-
-    }
-
-    /**
-     * 获取连接池方法
-     *
-     * @return
-     */
-    public static DataSource getDataSourse() {
-        return ds;
     }
 }

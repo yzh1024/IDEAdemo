@@ -1,7 +1,7 @@
 package jdbctemplate;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-import utils.JDBCUtils;
+import druidutils.JDBCUtils;
 
 /*
 JdbcTempLate入门
