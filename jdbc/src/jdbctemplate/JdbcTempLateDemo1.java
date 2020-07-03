@@ -15,6 +15,5 @@ public class JdbcTempLateDemo1 {
         String sql = "update user set password = ? where name = ?";
         int count = template.update(sql,"000000","王五");
         System.out.println(count);
-
     }
 }
