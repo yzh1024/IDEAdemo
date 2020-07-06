@@ -39,9 +39,9 @@ public class JdbcTempLateDemo2 {
     public void text2() {
         //1、获取JDBCTample对象
         //2、定义SQL
-        String sql = "insert into user values(?,?,?)";
+        String sql = "insert into user(姓名,账号) values(?,?)";
         //3、执行SQL
-        int count = template.update(sql, 6,"亚瑟","000000" );
+        int count = template.update(sql, "亚瑟","000" );
         System.out.println(count);
     }
 
@@ -61,7 +61,8 @@ public class JdbcTempLateDemo2 {
 
 
     /**
-     * 4、查询id为1的记录，将其封装为Map对象
+     * 4、查询id为1的记录，将
+     * 其封装为Map对象
      * 注意：这个方法查询的结果集长度只能为一，也就是说只能封装一条记录，所以SQL语句只能查询一条记录
      */
     @Test

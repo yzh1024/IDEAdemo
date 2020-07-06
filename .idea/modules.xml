@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IDEAdemo.iml" filepath="$PROJECT_DIR$/IDEAdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/USB/USB.iml" filepath="$PROJECT_DIR$/USB/USB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/date/date.iml" filepath="$PROJECT_DIR$/date/date.iml" />
       <module fileurl="file://$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" filepath="$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/text/text.iml" filepath="$PROJECT_DIR$/text/text.iml" />

@@ -10,6 +10,8 @@ public class jdbcDemo7Text {
     private  int math ;
     private int english ;
 
+
+
     @Override
     public String toString() {
         return "jdbcDemo7Text{" +
