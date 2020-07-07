@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/USB/USB.iml" filepath="$PROJECT_DIR$/USB/USB.iml" />
       <module fileurl="file://$PROJECT_DIR$/collection/collection.iml" filepath="$PROJECT_DIR$/collection/collection.iml" />
       <module fileurl="file://$PROJECT_DIR$/date/date.iml" filepath="$PROJECT_DIR$/date/date.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dou_di_zhu/dou_di_zhu.iml" filepath="$PROJECT_DIR$/dou_di_zhu/dou_di_zhu.iml" />
       <module fileurl="file://$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" filepath="$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" />
       <module fileurl="file://$PROJECT_DIR$/iterator/iterator.iml" filepath="$PROJECT_DIR$/iterator/iterator.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
