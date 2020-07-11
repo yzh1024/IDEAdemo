@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" filepath="$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" />
       <module fileurl="file://$PROJECT_DIR$/iterator/iterator.iml" filepath="$PROJECT_DIR$/iterator/iterator.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/map/map.iml" filepath="$PROJECT_DIR$/map/map.iml" />
       <module fileurl="file://$PROJECT_DIR$/system/system.iml" filepath="$PROJECT_DIR$/system/system.iml" />
       <module fileurl="file://$PROJECT_DIR$/text/text.iml" filepath="$PROJECT_DIR$/text/text.iml" />
     </modules>
