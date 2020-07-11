@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class DouDiZhu {
+public class DouDiZhu1 {
     public static void main(String[] args) {
         //1、准备牌
         ArrayList<String> poker = new ArrayList<>();

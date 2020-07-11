@@ -1,9 +1,21 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 
 
-public class demo {
+//斗地主发牌案例（有序）分析：
+//        1、准备牌
+//        用两个List几个分别存储牌号和花色
+//        准备一个HashMap来存储扑克（键是索引，值是扑克内容）
+//        准备一个ArrayList来存储索引
+//        2、洗牌、
+//        打乱索引号（ArrayList）
+//        3、发牌
+//        分别把54个索引发给三个人和一个底牌（ArrayList）
+//        4、看牌
+//        定义一个方法用来打印牌
+//        参数：姓名（String），索引（ArrayList），扑克（HashMap）
+public class DouDiZhu2 {
     public static void main(String[] args) {
 //        1、准备牌
         ArrayList<String> colors = new ArrayList<>();
