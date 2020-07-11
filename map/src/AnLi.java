@@ -14,7 +14,7 @@ public class AnLi {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入一个字符串：");
         String str = sc.nextLine();
-        //创建HashMap集合
+        //1、创建HashMap集合
         Map<Character, Integer> map = new HashMap<>();
         for (char c : str.toCharArray()) {
             if (map.containsKey(c)) {
@@ -24,7 +24,7 @@ public class AnLi {
                 map.put(c, 1);
             }
         }
-        //遍历输出
+        //2、遍历输出
         for (Character c : map.keySet()) {
             System.out.println(c + "=" + map.get(c));
         }
