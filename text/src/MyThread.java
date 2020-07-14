@@ -1,13 +1,15 @@
 public class MyThread extends Thread {
-    public MyThread() {
-    }
 
     public MyThread(String name) {
         super(name);
     }
 
+    public MyThread() {
+    }
+
     @Override
     public void run() {
-        System.out.println("hello,我执行了run方法");
+        System.out.println(getName());
+
     }
 }
