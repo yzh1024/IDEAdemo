@@ -1,6 +1,6 @@
 package mai_piao;
 /*
-使用同步代码块来解决线程安全问题
+方法一：使用同步代码块来解决线程安全问题
  */
 public class RunnableImpl1 implements Runnable {
     //定义一个多线程共享的票源
@@ -10,7 +10,7 @@ public class RunnableImpl1 implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
+  while (true) {
             //创建一个同步代码块
             synchronized (obj){
                 if (ticket > 0) {
