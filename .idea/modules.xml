@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/date/date.iml" filepath="$PROJECT_DIR$/date/date.iml" />
       <module fileurl="file://$PROJECT_DIR$/dou_di_zhu/dou_di_zhu.iml" filepath="$PROJECT_DIR$/dou_di_zhu/dou_di_zhu.iml" />
       <module fileurl="file://$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" filepath="$PROJECT_DIR$/fa_hong_bao/fa_hong_bao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/file/file.iml" filepath="$PROJECT_DIR$/file/file.iml" />
       <module fileurl="file://$PROJECT_DIR$/iterator/iterator.iml" filepath="$PROJECT_DIR$/iterator/iterator.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/map/map.iml" filepath="$PROJECT_DIR$/map/map.iml" />
